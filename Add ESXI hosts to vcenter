@@ -1,0 +1,16 @@
+---
+- hosts: xxxxxxx
+  tasks:
+       - name: Add ESXi Host to vcenter
+         local_action:
+           module: vmware_host
+           hostname: x.x.x.x
+           username: Administrator@VCENTERSERVER.LOCAL
+           password: xxxxxxx
+           datacenter_name: xxxxxxxx
+           validate_certs: false
+           cluster: ESXI Cluster 
+           esxi_hostname: x.x.x.x
+           esxi_username: xxxxxxx
+           esxi_password: xxxxxxx
+           state: present
