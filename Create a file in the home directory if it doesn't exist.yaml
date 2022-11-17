@@ -1,0 +1,8 @@
+---
+- name: Create a file in the home directory if it doesn't exist
+  hosts: xxxxx
+  tasks:
+    - name: Create a file in the home directory
+      shell: echo "Hey guys!" > $HOME/hello.txt
+      args:
+       creates: "$HOME/hello.txt"
