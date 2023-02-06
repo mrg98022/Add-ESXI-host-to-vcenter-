@@ -3,4 +3,4 @@
   hosts: 152.168.34.176
   tasks:
     - name: Run daily script
-      cmd: ./daily.sh
+      shell: ./daily.sh
