@@ -1,0 +1,6 @@
+---
+- name: Run daily script on remote host
+  hosts: 152.168.34.176
+  tasks:
+    - name: Run daily script
+      cmd: ./daily.sh
