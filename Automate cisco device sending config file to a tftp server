@@ -1,0 +1,25 @@
+1st login to your cisco device and enter config mode
+
+Example:
+CISCO-SWITCH(config-archive)#path tftp://(IP of TFTP SERVER)/(NAME OF FILE)
+CISCO-SWITCH(config-archive)#write-memory
+CISCO-SWITCH(config-archive)#exit
+
+this will tell the switch to send to the tftp server when the (writem memory) command is exucuted. 
+
+
+---
+- name: write memory
+  hosts: (IP or HOSTNAME of cisco device)
+  gather_facts: no
+  connection: network_cli
+
+  tasks:
+    - name: write memory
+      ios_command:
+        commands:
+          - write memory
+      register: output
+
+    - debug:
+        var: output.stdout_lines
