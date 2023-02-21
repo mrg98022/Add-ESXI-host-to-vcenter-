@@ -1,6 +1,8 @@
 1st login to your cisco device and enter config mode
 
 Example:
+CISCO-SWITCH#config t
+CISCO-SWITCH(config)# archive
 CISCO-SWITCH(config-archive)#path tftp://(IP of TFTP SERVER)/(NAME OF FILE)
 CISCO-SWITCH(config-archive)#write-memory
 CISCO-SWITCH(config-archive)#exit
